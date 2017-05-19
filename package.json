@@ -5,6 +5,7 @@
   "main": "lib/WitRecognizer",
   "types": "lib/WitRecognizer",
   "scripts": {
+		"postinstall" : "tsc",
     "build": "tsc",
     "types": "tsc --declaration",
     "build:watch": "tsc --watch",

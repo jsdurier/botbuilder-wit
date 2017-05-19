@@ -194,7 +194,9 @@ export class WitRecognizer {
                                     // as its value which cannot be found in the original message.
                                     foundEntity.startIndex = response._text.indexOf(value);
                                     foundEntity.endIndex = foundEntity.startIndex + (value.length - 1);
-                                }
+                                } else { //entity de type trait (comme l'entity sentiment par exemple)
+																		foundEntity.entity = value;
+																}
                                 result.entities.push(foundEntity);
                             }
                         }
